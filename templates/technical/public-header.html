@@ -7,10 +7,10 @@
     <div class="container-fluid d-flex justify-content-center">
         
         <div class="w-25 d-flex d-flex justify-content-evenly">
-            <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Start</a>
+            <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="{% url 'landing' %}">Start</a>
             <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Contact</a>
             
-            <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Sign in</a>
+            <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="{% url 'sign_in' %}">Sign in</a>
         </div>
       
 
@@ -25,9 +25,9 @@
     <div class="d-flex justify-content-start mt-lg-0 mt-2 w-100 d-block d-lg-none">
         <div class="collapse" id="navbarToggleExternalContent" >
             <div class=" p-4">
-              <a href="" class="fs-4 nav-link text-start text-body-emphasis mb-2">Start</a>
+              <a href="{% url 'landing' %}" class="fs-4 nav-link text-start text-body-emphasis mb-2">Start</a>
               <a href="" class="fs-4 nav-link text-start text-body-emphasis mb-2">Contact</a>
-              <a href=""  class="fs-4 nav-link text-start text-body-emphasis ">Sign in</a>
+              <a href="{% url 'sign_in' %}"  class="fs-4 nav-link text-start text-body-emphasis ">Sign in</a>
             </div>
             
           </div>
