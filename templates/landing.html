@@ -1,71 +1,34 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GM App</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+{% include 'technical/boilerplate_top.html' %}
 
-    <style>
-        .parallax {
-          /* The image used */
-          
-        
-          /* Set a specific height */
-          
-        
-          /* Create the parallax scrolling effect */
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-
-        .background-image-1{
-            background-image: url("{% static 'images/landing.webp' %}");
-        }
-
-        .background-image-2{
-            background-image: url("{% static 'images/landing2.webp' %}");
-        }
-
-        </style>
-
-</head>
-<body>
-    <!-- sticky Bootstrap Header -->
-    <nav class="navbar fixed-top py-3" data-bs-theme="dark" style="background: rgba(33, 37, 41, 0.9) !important"   >
-        <div class="container-fluid d-flex justify-content-center">
-            <div class="w-25 d-flex d-flex justify-content-evenly">
-                <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Start</a>
-                <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Donate</a>
-                
-                <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Sign in</a>
-            </div>
-          
-
-          
-          
-        </div>
-        <div class="container-fluid d-flex justify-content-center d-block d-lg-none">
-            <button class="navbar-toggler d-block d-lg-none mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="d-flex justify-content-start mt-lg-0 mt-2 w-100 d-block d-lg-none">
-            <div class="collapse" id="navbarToggleExternalContent" >
-                <div class=" p-4">
-                  <a href="" class="fs-4 nav-link text-start text-body-emphasis mb-2">Start</a>
-                  <a href=""  class="fs-4 nav-link text-start text-body-emphasis ">Sign in</a>
-                </div>
-                
-              </div>
-        </div>
-
-    </nav>
+<style>
+    .parallax {
+      /* The image used */
+      
     
+      /* Set a specific height */
+      
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .background-image-1{
+        background-image: url("{% static 'images/landing.webp' %}");
+    }
+
+    .background-image-2{
+        background-image: url("{% static 'images/landing2.webp' %}");
+    }
+
+    </style>
+<body>
+    
+    {% include 'technical/public-header.html' %}
 
     <!-- Main IMage as a background with parallax effect and a headline -->
     <div class="parallax background-image-1 position-relative d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
@@ -89,10 +52,12 @@
 
     <!--  -->
     <div class="bg-dark">
-        <div class="container text-white py-5">
-            <h2 class="text-center">Welcome to GM App</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est eu
+        <div class="container text-white py-5 ">
+            <h2 class="text-center mb-4">Welcome to GM App</h2>
+            <p class="text-justify mx-2">GM App is your ultimate companion for running immersive and dynamic pen-and-paper RPG sessions. Designed for Game Masters, it helps you react intuitively and creatively to unexpected events, ensuring every session feels seamless and engaging. With GM App, you can generate encounters, improvise NPCs, and adapt the storyline on the fly—making spontaneous moments more exciting and effortless. Whether you're managing combat, crafting side quests, or handling unpredictable player actions, this app keeps you prepared without breaking immersion.</p>
+            <p class="text-justify mx-2">No matter your experience level, GM App empowers you to run smooth and captivating games with minimal preparation. Stay in control, fuel your creativity, and enhance your storytelling—all in one intuitive tool.</p>
+            <p class="text-justify mx-2">Stay flexible, stay creative, and bring your world to life!</p>
+            
         </div>
     </div>
     <div class="">
@@ -109,6 +74,36 @@
                 <h1 class="text-center text-white py-3">Stay up to date</h1>
                 <h2 class="text-center text-white px-5 px-lg-0 py-2">Sign up for our the newsletter</h2>
             </div>
+            <form class="container">
+                <div class="  row">
+                    <div class="col-12 col-md-6 mx-auto mt-md-0 mt-3">
+                        <label for="firstnameinput" class="form-label text-white">First Name</label>
+                        <input type="text" class="form-control bg-dark" id="firstnameinput" placeholder="name@example.com">
+                    </div>
+
+                    <div class="col-12 col-md-6 mx-auto mt-md-0 mt-3">
+                        <label for="exampleFormControlInput1" class="form-label text-white">Email address</label>
+                        <input type="email" class="form-control bg-dark" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                    </div>
+                    
+                    <div class="mt-3 mx-auto  ps-4 d-flex align-items-center">
+                        
+                        <input style="transform: scale(2);" type="checkbox" class="col-2 form-check-input bg-dark" id="exampleFormControlInput1" placeholder=""  required>
+                        
+                        
+                        <label for="exampleFormControlInput1" class="col-10 form-label text-white ms-4 pt-2">I want to receive the Newsletter. I understand that I can revoke my consent at any time.</label>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-2">
+                        <button type="button" class="btn btn-dark fw-bold border-white">Subscribe</button>
+                    </div>
+
+                    
+
+
+                </div>
+            </form>
+
         </div>
     </div>
 
@@ -120,6 +115,11 @@
             });
         });
     </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+
+<footer class="footer mt-auto py-3 bg-custom-dark"  data-bs-theme="dark">
+    <div class="container">
+        <span class="text-white">Place sticky footer content here.</span>
+    </div>
+</footer>
+
+{% include 'technical/boilerplate_bottom.html' %}
