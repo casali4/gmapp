@@ -39,7 +39,7 @@
             </div>
         </div>
         
-        <div class="mt-auto mb-5   ">
+        <div class="mt-auto   ">
             <img class="shadow-lg " style="color:white !important; cursor: pointer;" id="scrollDownButton" src="{% static 'images/caret_double_down_white.svg' %}" height="150" width="150">
         </div>
 
@@ -68,8 +68,8 @@
         </div>
     </div>
 
-    <div class="parallax background-image-2 position-relative d-flex justify-content-center" style="height: 100vh;">
-        <div class="w-100 py-5 position-absolute" style="background: rgba(33, 37, 41, 0.8); top: 25%;">
+    <div class="parallax mb-5 background-image-2 position-relative d-flex justify-content-center" style="min-height: 100vh;">
+        <div class="w-100 py-2 mb-5 mb-lg-0 py-lg-5 y-4 position-absolute" style="background: rgba(33, 37, 41, 0.8); top: 25%;">
             <div>
                 <h1 class="text-center text-white py-3">Stay up to date</h1>
                 <h2 class="text-center text-white px-5 px-lg-0 py-2">Sign up for our the newsletter</h2>
@@ -78,17 +78,17 @@
                 <div class="  row">
                     <div class="col-12 col-md-6 mx-auto mt-md-0 mt-3">
                         <label for="firstnameinput" class="form-label text-white">First Name</label>
-                        <input type="text" class="form-control bg-dark" id="firstnameinput" placeholder="name@example.com">
+                        <input type="text" class="form-control text-white bg-dark" id="firstnameinput" placeholder="name@example.com">
                     </div>
 
                     <div class="col-12 col-md-6 mx-auto mt-md-0 mt-3">
                         <label for="exampleFormControlInput1" class="form-label text-white">Email address</label>
-                        <input type="email" class="form-control bg-dark" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                        <input type="email" class="form-control text-white bg-dark" id="exampleFormControlInput1" placeholder="name@example.com" required>
                     </div>
                     
                     <div class="mt-3 mx-auto  ps-4 d-flex align-items-center">
                         
-                        <input style="transform: scale(2);" type="checkbox" class="col-2 form-check-input bg-dark" id="exampleFormControlInput1" placeholder=""  required>
+                        <input style="transform: scale(2);" type="checkbox" class="col-2 form-check-input bg-dark " id="exampleFormControlInput1" placeholder=""  required>
                         
                         
                         <label for="exampleFormControlInput1" class="col-10 form-label text-white ms-4 pt-2">I want to receive the Newsletter. I understand that I can revoke my consent at any time.</label>
@@ -107,19 +107,24 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('scrollDownButton').addEventListener('click', function() {
-            window.scrollTo({
-                top: document.querySelector('.bg-dark').offsetTop - 125, // Adjust the offset value as needed
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    
 
-<footer class="footer mt-auto py-3 bg-custom-dark"  data-bs-theme="dark">
+<footer class="footer fixed-bottom mt-auto py-3 bg-dark"  data-bs-theme="dark">
     <div class="container">
-        <span class="text-white">Place sticky footer content here.</span>
+        <div class="d-flex justify-content-start">
+            <button type="button" class="btn btn-dark border-white mx-2">English</button>
+            <button type="button" class="btn btn-dark mx-2">Deutsch</button>
+        </div>
     </div>
 </footer>
+
+<script>
+    document.getElementById('scrollDownButton').addEventListener('click', function() {
+        window.scrollTo({
+            top: document.querySelector('.bg-dark').offsetTop - 125, // Adjust the offset value as needed
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 {% include 'technical/boilerplate_bottom.html' %}

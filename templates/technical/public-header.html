@@ -1,6 +1,11 @@
+{% load static %}
 <!-- sticky Bootstrap Header -->
 <nav class="navbar fixed-top py-3 bg-custom-dark" data-bs-theme="dark"   >
+    <a class="navbar-brand d-none d-lg-block ms-5 d-flex align-items-center  " href="#" style="position: absolute;">
+        <h4 class="mt-2 text-white"><img class="mb-2" style="color: white !important; " src="{% static 'images/fire.svg' %}" alt="Bootstrap" width="30" height="24">GM App</h4>
+      </a>
     <div class="container-fluid d-flex justify-content-center">
+        
         <div class="w-25 d-flex d-flex justify-content-evenly">
             <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Start</a>
             <a class="fs-3 nav-link text-white text-center py-1 d-none d-lg-block" href="#">Contact</a>
