@@ -1,7 +1,66 @@
-.env
-.git
+*.env
+*.git
 db.sqlite3
-media
-Pipfile
-Pipfile.lock
+*media
+
 static/settings_static.txt
+
+# Bytecode
+
+__pycache__/
+
+*.py[cod]
+
+*.pyo
+
+  
+
+# Virtualenvs
+
+.venv/
+
+env/
+
+venv/
+
+  
+
+# Env & Secrets
+
+.env
+
+.env.*
+
+  
+
+# Pytest
+
+.pytest_cache/
+
+.coverage
+
+  
+
+# Build artifacts
+
+build/
+
+dist/
+
+*.egg-info/
+
+  
+
+# IDEs / Editors
+
+.vscode/
+
+.idea/
+
+  
+
+# macOS / Windows
+
+.DS_Store
+
+Thumbs.db
