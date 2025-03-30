@@ -14,6 +14,8 @@ jobs:
       max-parallel: 4
       matrix:
         python-version: [3.12,3.13]
+    env:
+      DJANGO_SECRET: ${{ secrets.DJANGO_SECRET }}
 
     steps:
     - uses: actions/checkout@v4
