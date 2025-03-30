@@ -16,6 +16,7 @@ jobs:
         python-version: [3.12,3.13]
     env:
       DJANGO_SECRET: ${{ secrets.DJANGO_SECRET }}
+      DEBUG: ${{ secrets.DEBUG }}
 
     steps:
     - uses: actions/checkout@v4
