@@ -8,7 +8,7 @@ name = "gmapp"
 version = "0.1.0"
 description = "A Webapp designed to support Pen and Paper Gamemasters during sessions"
 authors = [
-    { name="Casali4", email="" }
+    { name="Casali4", email="pap.spieleabend@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.13"
