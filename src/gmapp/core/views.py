@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 #handlers
-from handlers.auth import handler_login
+from .handlers.auth import handler_login
 
 # Create your views here.
 def landing(request):
