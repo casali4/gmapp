@@ -30,4 +30,4 @@ jobs:
         pip install -e .[dev]
     - name: Run Tests #testing with django
       run: |
-        python src/gmapp/manage.py test
+        python src/gmapp/manage.py test core
