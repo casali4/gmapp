@@ -4,7 +4,7 @@ from django.test import TestCase
 
 
 #### TESTING VIEWS ####
-from django.test import TestCase
+
 from django.urls import reverse
 
 class SimpleViewTests(TestCase):
