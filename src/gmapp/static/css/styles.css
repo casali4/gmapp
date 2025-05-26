@@ -1,7 +1,19 @@
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .text-justify {
     text-align: justify;
   }
 
 .bg-custom-dark {
   background: rgba(33, 37, 41) !important;
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
 }

@@ -1,0 +1,145 @@
+{% load static %}
+
+{% include 'technical/boilerplate_top.html' %}
+
+<style>
+.background-image-1{
+        background-image: url("{% static 'images/dashboard1.png' %}");
+        
+    }
+
+</style>
+
+<body class="background-image-1">
+    <div class="container-lg vh-100" style="background: rgba(33, 37, 41, 0.8); top: 25%;">
+        <div class="">
+            <!-- Here be navbar -->
+             <div class="pt-4">
+                {% include 'technical/navbar.html' %}
+            </div>
+        <div>
+            <!-- here be content -->
+            <div class="row mt-5">
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                <a class="text-decoration-none" href="{% url 'encounters' %}">
+                    <div class="card hover-scale">
+                    <div class="card-body row">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                        <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/question-circle.svg' %}">
+                        </div>
+                        <div class="col-8 fs-3">Encounters</div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                <a class="text-decoration-none" href="{% url 'rolling_tables' %}">
+                    <div class="card hover-scale">
+                    <div class="card-body row">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                        <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/table.svg' %}">
+                        </div>
+                        <div class="col-8 fs-3">Rolling Tables</div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                <a class="text-decoration-none" href="{% url 'items_rewards' %}">
+                    <div class="card hover-scale">
+                    <div class="card-body row">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                        <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/text-indent-left.svg' %}">
+                        </div>
+                        <div class="col-8 fs-3">Items & Rewards</div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                <a class="text-decoration-none" href="{% url 'questboard' %}">
+                    <div class="card hover-scale">
+                    <div class="card-body row">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                        <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/border-all.svg' %}">
+                        </div>
+                        <div class="col-8 fs-3">Questboard</div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                    <a class="text-decoration-none" href="{% url 'npcs' %}">
+                        <div class="card hover-scale">
+                        <div class="card-body row">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/people.svg' %}">
+                            </div>
+                            <div class="col-8 fs-3">NPCs</div>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                    <a class="text-decoration-none" href="{% url 'music_playlists' %}">
+                        <div class="card hover-scale">
+                        <div class="card-body row">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/music-note-list.svg' %}">
+                            </div>
+                            <div class="col-8 fs-3">Music & Playlists</div>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                    <a class="text-decoration-none" href="">
+                        <div class="card hover-scale">
+                        <div class="card-body row">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/sign-turn-right.svg' %}">
+                            </div>
+                            <div class="col-8 fs-3">Plan Session</div>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+                    <a class="text-decoration-none" href="">
+                        <div class="card hover-scale">
+                        <div class="card-body row">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/box-arrow-in-up.svg' %}">
+                            </div>
+                            <div class="col-8 fs-3">Plan Campaign</div>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            
+            <hr class="text-white">
+
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <img  style="height: 40px; width: 40px;" src="{% static 'images/newspaper.svg' %}">
+                        </div>
+                        <div class="col-10 fs-3 ">
+                            News
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        123
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+{% include 'technical/boilerplate_bottom.html' %}

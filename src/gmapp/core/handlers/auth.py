@@ -15,6 +15,11 @@ def handler_login(request:object) -> object:
     Validates the form, checks credentials, and redirects accordingly.
     """
     
+    # todo check credentials
+
+    # if correct --> login
+
+    # redirect to dashboard
 
 
     # return a redirect
