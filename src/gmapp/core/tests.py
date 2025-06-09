@@ -26,6 +26,9 @@ class SimpleViewTests(TestCase):
 
 
 
+# TODO -> run each view authenticated and unauthenticated
+
+
 # TODO run sign_in test
 # if get --> should 200 and render sign-in.html
 # if post --> check if the form is valid --> assert True AND redirect to dashboard

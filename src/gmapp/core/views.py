@@ -1,14 +1,16 @@
 from django.shortcuts import render
-
-
+from django.http import Http404
+from django.utils.translation import gettext_lazy as _
 
 
 #handlers
 from .handlers.auth import handler_login
+from .handlers.encounters import handler_encounters
 from django.contrib.auth import logout 
 from django.shortcuts import redirect
 
-# Create your views here.
+### Public views ###
+
 def landing(request):
     return render(request, 'landing.html')
 
@@ -24,12 +26,19 @@ def sign_in(request):
     elif request.method == 'POST':
     #if post --> process the form
         return handler_login(request)
-    
+
+
+
+### Logged in views ###
+
 def dashboard(request):
     return render(request, 'dashboard.html')
 
 def encounters(request):
-    return render(request, 'encounters.html')
+    if request.method == 'GET':
+        return handler_encounters(request)
+    else:
+        raise Http404(_('Page not found'))
 
 def rolling_tables(request):
     return render(request, 'rolling_tables.html')
