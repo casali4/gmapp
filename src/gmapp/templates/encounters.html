@@ -19,11 +19,23 @@
             </div>
         <div>
             <!-- here be content -->
-            <div class="row mt-5">
-                <div class=" col-12 col-lg-6 mb-lg-4 mb-4">
+
+            <div class="d-flex align-items-center justify-content-between my-4">
+                <a href="{% url 'dashboard' %}" class="btn btn-light fs-5 d-flex align-items-center">
+                    <img src="{% static 'images/caret-left-fill.svg' %}" alt="Back"> Back
+                </a>
+
+                <h1 class="ms-2 text-white text-center flex-grow-1 m-0">Encounters</h1>
+
+                <!-- Platzhalter, damit das Layout zentriert bleibt -->
+                <div style="width: 110px;"></div>
+            </div>
+
+            <div class="row ">
+                <div class=" col-12 col-lg-6 mb-lg-4 mb-4 ">
                 <a id="new-encounter" class="text-decoration-none cursor-pointer" >
-                    <div class="card hover-scale">
-                    <div class="card-body row">
+                    <div class="card hover-scale  cursor-pointer">
+                    <div class="card-body row  cursor-pointer">
                         <div class="col-2 d-flex align-items-center justify-content-center">
                         <img class="col-2" style="height: 40px; width: 40px;" src="{% static 'images/plus-circle.svg' %}">
                         </div>

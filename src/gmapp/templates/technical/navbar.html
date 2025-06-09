@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'encounters' %}">Encounters</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
             </li>
             
         
@@ -19,6 +19,7 @@
                 Tools
             </a>
             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'encounters' %}">Encounters</a></li>
                 <li><a class="dropdown-item" href="{% url 'rolling_tables' %}">Rolling Tables</a></li>
                 <li><a class="dropdown-item" href="{% url 'items_rewards' %}">Items & Rewards</a></li>
                 <li><a class="dropdown-item" href="{% url 'questboard' %}">Questboard</a></li>
