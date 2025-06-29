@@ -70,8 +70,9 @@
                             <h4>New Encounter</h4>
                         </div>
                         <div class=" col-9 d-flex justify-content-end">
-                            <div class="col-  me-4">
-                                <button class="btn btn-outline-primary">
+                            <div class="col-  me-4" >
+                                <button id="new-encounter-button" type="button" class="btn btn-outline-primary" >
+                                <!-- data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="1"  data-html-content="<button id='generate-encounter' class='btn btn-primary'>Generate</button>"> -->
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
                                         <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
                                     </svg>
@@ -86,9 +87,48 @@
                         </div>
                     </div>
                     <hr>
+                    <!-- Choices! -->
+                        <div class="row">
+                            <div class="col-12 col-lg-3">
+                                <label for="encounter-type text-center">Encounter Setting</label>
+                                <select id="encounter-setting" class="form-select" aria-label="Encounter Setting">
+                                    <option selected value="fantasy">Fantasy</option>
+                                    <option value="modern">Modern</option>
+                                    <option value="scifi">Sci-Fi</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <label for="encounter-area text-center">Encounter Area</label>
+                                <select id="encounter-area" class="form-select" aria-label="Encounter Area">
+                                    <option selected value="woods">Woods</option>
+                                    <option value="city">City</option>
+                                    <option value="village">Village</option>
+                                    <option value="mountains">Mountains</option>
+                                    <option value="cave">Cave</option>
+                                    <option value="dungeon">Dungeon</option>
+                                    <option value="tavern">Tavern</option>
+                                    <option value="ancient_ruins">Ancient Ruins</option>
+                                    <option value="crossroads">Crossroads</option>
+                                    <option value="ocean">Ocean</option>
+                                </select>
+                                
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <label for="encounter-danger text-center">Include Dangerous Encounters?</label>
+                                <select id="encounter-danger" class="form-select" aria-label="Encounter Danger Level">
+                                    <option selected value="all">Include all</option>
+                                    <option value="safe">Safe only</option>
+                                    <option value="dangerous">Dangerous only</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                
+                            </div>
+                        </div>
+                    <hr>
                     <div>
-                        <h5 class="ms-3">{{random_encounter.title}}</h5>
-                        <p class="ms-3">{{random_encounter.text}}</p>
+                        <h5 id="encounter-title" class="ms-3">{{random_encounter.title}}</h5>
+                        <p id="encounter-text" class="ms-3">{{random_encounter.text}}</p>
                     </div>
                     <!-- add description -->
                     <!-- Add rules? -->
@@ -112,6 +152,8 @@
         </div>
     </div>
 </body>
+
+{% csrf_token %}
 
 <script src="{% static 'js/encounters.js' %}"></script>
 

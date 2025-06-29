@@ -1,13 +1,19 @@
 from django.shortcuts import render
 from django.http import Http404
 from django.utils.translation import gettext_lazy as _
+from django.http import JsonResponse
 
+
+import json
 
 #handlers
 from .handlers.auth import handler_login
 from .handlers.encounters import handler_encounters
 from django.contrib.auth import logout 
 from django.shortcuts import redirect
+
+
+
 
 ### Public views ###
 
@@ -38,7 +44,29 @@ def encounters(request):
     if request.method == 'GET':
         return handler_encounters(request)
     else:
-        raise Http404(_('Page not found'))
+        print("Invalid request method for encounters view")
+        # load the sent json
+        data = json.loads(request.body.decode('utf-8'))
+        # Validate the data and content (only allowed keys and values)
+        allowed_settings = {"fantasy", "modern", "scifi"}
+        allowed_areas = {"woods", "city", "village", "mountains", "cave", "dungeon", "tavern", "ancient_ruins", "crossroads", "ocean"}
+        allowed_dangers = {"all", "safe", "dangerous"}
+
+        setting = data.get("setting")
+        area = data.get("area")
+        danger = data.get("danger")
+
+        if setting not in allowed_settings:
+            return JsonResponse({'error': 'Invalid encounter setting.'}, status=400)
+        if area not in allowed_areas:
+            return JsonResponse({'error': 'Invalid encounter area.'}, status=400)
+        if danger not in allowed_dangers:
+            return JsonResponse({'error': 'Invalid danger level.'}, status=400)
+
+        # ...existing code.
+
+        
+        return JsonResponse({'headline':'OK', 'text':'', 'data':{}}, status=200)
 
 def rolling_tables(request):
     return render(request, 'rolling_tables.html')
